@@ -6,6 +6,9 @@ var numharvester = 2;
 var numupgrader = 2;
 var numbuilder = 4;
 
+
+//testing git installation on windows
+
 module.exports.loop = function () {
 
     for(var name in Memory.creeps) {
