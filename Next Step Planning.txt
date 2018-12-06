@@ -12,3 +12,15 @@ Making sure roads get repaired
 Check how the memory works. If everything in a room has an ID attached to it, then something like container ID memory being able to be assigned a worker ID should be do-able, in which case workers should check the ID's of containers to see if they're occupied.
 
 This could be extended to workers operating on routes as well
+
+
+Remove harvesting from builders/repairers - prevent clogging
+Should saturate sources for 3000energy/300ticks from RCL1 by optimizing costs of workers and then switch over to stationary miners and transporters that take energy and store it in extensions. Builders/repairers should only get energy from buildings. Upgraders should also only get energy from buildings.
+
+A rate of expenditure should be calculated (cost of replenishing forces as well as drain to controller + repairs) and should be maintained below income levels
+
+
+
+
+(actual first priority is making defenses)
+FIRST PRIORITY: creating workers based on available resourceCapacity and calculating how much energy to put into workers to get to that point (making too many is wasteful)

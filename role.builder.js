@@ -15,7 +15,7 @@ var roleBuilder = {
 	        var targets = creep.room.find(FIND_CONSTRUCTION_SITES);
             if(targets.length) {
                 if(creep.build(targets[0]) == ERR_NOT_IN_RANGE) {
-                    creep.moveTo(targets[0], {visualizePathStyle: {stroke: '#ffffff'}});
+                    creep.moveTo(targets[0]);
                 }
 			} else {
 				var targets = creep.room.find(FIND_STRUCTURES, {
@@ -29,12 +29,19 @@ var roleBuilder = {
 				}
 			}
 	    }
-	    else {
+	    else { //if not in building state
 	        var sources = creep.room.find(FIND_SOURCES);
-	        var nearfar = 0;
+	        var nearfar = 1;
             if(creep.harvest(sources[nearfar]) == ERR_NOT_IN_RANGE) {
-                creep.moveTo(sources[nearfar], {visualizePathStyle: {stroke: '#ffaa00'}});
-            }
+                creep.moveTo(sources[nearfar]);
+			}
+			// withdraw from extensions first, otherwise harvest from sources
+			//var extensions = creep.room.find(FIND_STRUCTURES)
+
+			// get a list of all extensions
+			// Do I need to check which one has energy in it or will it do that automatically?
+
+
 	    }
 	    if(creep.carry.energy == creep.carryCapacity && creep.memory.building == false)
 	    {
@@ -47,7 +54,7 @@ var roleBuilder = {
                     					});
 	    	if(targets.length > 0) {
                 if(creep.transfer(targets[0], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
-                    creep.moveTo(targets[0], {visualizePathStyle: {stroke: '#ffffff'}});
+                    creep.moveTo(targets[0]);
                 }
             }
 	    }
