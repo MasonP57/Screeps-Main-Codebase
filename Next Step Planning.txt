@@ -3,7 +3,12 @@ Creating creeps based on maximum amount of resources available
 Mathing out optimal upgrader amount
 Building defenses
 Builders prioritize extensions over roads
-
+Making sure roads get repaired
 
 2 sources = 6000 energy, 20 energy regenerated/tick on average, 5 minutes per source to regenerate to full
 2 stationary miners made of 1 move 50 energy 5 work 100 (550 energy total for most basic container miner)
+
+
+Check how the memory works. If everything in a room has an ID attached to it, then something like container ID memory being able to be assigned a worker ID should be do-able, in which case workers should check the ID's of containers to see if they're occupied.
+
+This could be extended to workers operating on routes as well
