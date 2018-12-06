@@ -1,5 +1,5 @@
 Container mining
-Creating creeps based on maximum amount of resources available
+Creating creeps based on maximum amount of resources available - start with this and set some kind of condition later to do stationary mining, this way restarting is easier
 Mathing out optimal upgrader amount
 Building defenses
 Builders prioritize extensions over roads
